@@ -162,6 +162,7 @@ nav a:hover {
   object-fit: cover;
   filter: brightness(80%);
   border-radius: 20px;
+  backdrop-filter: blur(15px);
 }
 
 #slide1:checked ~ .slides { transform: translateX(0%); }
