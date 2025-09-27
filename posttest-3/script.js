@@ -8,9 +8,9 @@ let hasNextSeason = true;
 let hasNextUpcoming = true;
 let hasNextSearch = true;
 let currentSearchQuery = '';
-let sliderInterval = null; // Variabel untuk menyimpan interval slider
+let sliderInterval = null; 
 
-// ------------------- 🌙 THEME TOGGLE LOGIC ☀️ -------------------
+// Mode Malam - Terang
 const themeToggleButton = document.getElementById('theme-toggle');
 const body = document.body;
 
@@ -42,7 +42,7 @@ themeToggleButton.addEventListener('click', () => {
 // -----------------------------------------------------------------
 
 
-// ------------------- 🔍 SEARCH LOGIC 🔍 -------------------
+// Search logic anime
 function setupSearch() {
     const searchInput = document.querySelector('.search-bar input');
     const searchButton = document.querySelector('.search-bar button');
@@ -50,7 +50,7 @@ function setupSearch() {
     const performSearch = () => {
         const query = searchInput.value.trim();
         if (query) {
-            // Ubah hash untuk memicu router
+            
             window.location.hash = `#search/${encodeURIComponent(query)}`;
             searchInput.value = ''; // Kosongkan input setelah search
         }
@@ -63,10 +63,8 @@ function setupSearch() {
         }
     });
 }
-// -----------------------------------------------------------------
 
-
-// ------------------- 👤 USER MENU LOGIC 👤 -------------------
+// User Menu
 function setupUserMenu() {
     const userMenuButton = document.querySelector('.user-icon-button');
     const userPopup = document.getElementById('user-popup');
@@ -83,15 +81,12 @@ function setupUserMenu() {
         }
     });
 }
-// -----------------------------------------------------------------
-
 
 // Fungsi untuk mereset event scroll
 function resetScroll() {
   window.onscroll = null;
 }
 
-// ⚙️ Fungsi untuk menghentikan slider banner
 function stopBannerSlider() {
   if (sliderInterval) {
     clearInterval(sliderInterval);
@@ -99,7 +94,7 @@ function stopBannerSlider() {
   }
 }
 
-// ⚙️ Fungsi untuk memulai slider banner otomatis
+//Fungsi untuk memulai slider banner otomatis
 function startBannerSlider() {
   stopBannerSlider(); // Hentikan dulu jika ada yang berjalan
 
@@ -119,7 +114,7 @@ function startBannerSlider() {
 }
 
 
-// 🔹 Fungsi untuk membuat kartu anime dan menambahkan event listener
+//Fungsi untuk membuat card anime dan menambahkan event listener
 function createAnimeCard(anime) {
   const card = document.createElement("div");
   card.classList.add("card");
@@ -132,7 +127,7 @@ function createAnimeCard(anime) {
   return card;
 }
 
-// 🔹 Fungsi untuk menampilkan modal detail anime
+//Fungsi untuk menampilkan modal detail anime
 function showAnimeDetails(anime) {
   // Buat elemen modal
   const modalOverlay = document.createElement('div');
@@ -457,7 +452,7 @@ async function loadSeasonPreview() {
   }
 }
 
-// 🔹 Fetch 7 anime untuk upcoming preview
+//Fetch 7 anime untuk upcoming preview
 async function loadUpcomingPreview() {
   try {
     const res = await fetch("https://api.jikan.moe/v4/seasons/upcoming?sfw&page=1&limit=7");
@@ -475,7 +470,7 @@ async function loadUpcomingPreview() {
   }
 }
 
-// 🔹 Fetch full trending anime (infinite scroll)
+//Fetch full trending anime (infinite scroll)
 async function loadTrendingPage(page) {
   try {
     isLoading = true;
@@ -500,7 +495,7 @@ async function loadTrendingPage(page) {
   }
 }
 
-// 🔹 Fetch full season anime (infinite scroll)
+//Fetch full season anime (infinite scroll)
 async function loadSeasonPage(page) {
   try {
     isLoading = true;
@@ -525,7 +520,7 @@ async function loadSeasonPage(page) {
   }
 }
 
-// 🔹 Fetch full upcoming anime (infinite scroll)
+//Fetch full upcoming anime (infinite scroll)
 async function loadUpcomingPage(page) {
   try {
     isLoading = true;
@@ -551,7 +546,7 @@ async function loadUpcomingPage(page) {
   }
 }
 
-// 🔹 Fetch search results (infinite scroll)
+//Fetch search results (infinite scroll)
 async function loadSearchResults(page) {
   try {
     isLoading = true;

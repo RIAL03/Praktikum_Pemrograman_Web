@@ -6,7 +6,7 @@
   font-family: Arial, sans-serif;
 }
 
-/* 🎨 --- THEME VARIABLES --- 🎨 */
+/* Tema */
 :root {
   /* Dark Theme (Default) */
   --bg-primary: #0a0a0a;
@@ -38,8 +38,6 @@ body.light-theme {
   --modal-meta-bg: #f0f2f5;
   --loader-color: #050505;
 }
-/* 🎨 --- END THEME VARIABLES --- 🎨 */
-
 
 body {
   background-color: var(--bg-primary);
@@ -48,7 +46,7 @@ body {
   transition: background-color 0.3s, color 0.3s;
 }
 
-/* 🎨 Custom Elegant Scrollbar 🎨 */
+/* custom scrollbar */
 ::-webkit-scrollbar {
   width: 10px;
   height: 10px;
@@ -68,7 +66,7 @@ body {
   background-color: var(--text-secondary);
 }
 
-/* ⏳ Custom Loader ⏳ */
+/* custom loading */
 .loader-container {
   width: 100%;
   text-align: center;
@@ -79,8 +77,8 @@ body {
   display: inline-block;
   width: 50px;
   height: 50px;
-  border: 5px solid var(--bg-interactive); /* Light grey circle */
-  border-top-color: var(--loader-color); /* The moving part */
+  border: 5px solid var(--bg-interactive); 
+  border-top-color: var(--loader-color); 
   border-radius: 50%;
   animation: spin 1s linear infinite;
 }
@@ -362,7 +360,7 @@ footer p { margin-bottom: 10px; font-size: 0.9rem; }
 .footer-links a { color: var(--text-secondary); text-decoration: none; margin: 0 10px; font-size: 0.9rem; transition: color 0.3s; }
 .footer-links a:hover { color: var(--text-primary); }
 
-/* 💅 STYLING UNTUK MODAL DETAIL ANIME 💅 */
+/*  STYLING UNTUK MODAL DETAIL ANIME  */
 .modal-overlay {
   position: fixed;
   top: 0;
@@ -410,8 +408,8 @@ footer p { margin-bottom: 10px; font-size: 0.9rem; }
 
 .modal-trailer {
   margin-top: 15px;
-  width: 250px; /* Samakan dengan lebar poster */
-  aspect-ratio: 16 / 9; /* Jaga rasio video */
+  width: 250px; 
+  aspect-ratio: 16 / 9;
   border-radius: 10px;
   overflow: hidden;
 }
