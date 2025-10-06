@@ -1,0 +1,9 @@
+Nama : Muhammad Rizal Alfath
+Nim : 2409106039
+
+---- untuk login ---- 
+Username : admin
+Password admin123
+
+---- Catatan ----
+kadang API tidak muncul, coba hard refresh atau refresh biasa
